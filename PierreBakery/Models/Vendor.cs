@@ -10,11 +10,12 @@ namespace PierreBarkery.Models
     public int Id { get; }  //unique id of vendor
     public List<Order> Orders { get; set; } //list of orders (i.e. Matts BBQ -> Pulled Pork)
 
-    public Vendor(string name)
+    public Vendor(string vendorName)
     {
-      Name = name;
+      Name = vendorName;
       _instances.Add(this);
       Id = _instances.Count;
+      Orders = new List<Order>{};
     }
   }
 
