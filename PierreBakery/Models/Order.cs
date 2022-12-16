@@ -26,7 +26,7 @@ namespace PierreBarkery.Models
       _instances.Clear();
     }
 
-    public static Order Find(int id)
+    public static Order Find(int id)  //returns the id corresponding to the order within the list
     {
       return _instances[id-1];
     }

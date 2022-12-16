@@ -10,11 +10,8 @@
       crossorigin="anonymous">
   </head>
   <body>
-    <h1>@Model.Order.GetAll()</h1>
-    <form action="/orders" method="post"> 
-      <label for="description">Add a new order</label>
-      <input id="description" name="description" type="text">
-      <button type="submit">Submit</button>
-    </form>
+    <h1>@Model.Description</h1>
+       <h2><a href="/orders/new">Add another order</a></h2>
+       <h2><a href="/orders">View orders</a></h2>
   </body>
 </html>

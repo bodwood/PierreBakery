@@ -34,7 +34,7 @@ namespace PierreBarkery.Controllers
       return View();
     }
 
-    [HttpGet("orders/{id}")]  //dynamic routing
+    [HttpGet("orders/{id}")]  //id is found using the find method in order.cs
     public ActionResult Show(int id)
     {
       Order foundOrder = Order.Find(id);
