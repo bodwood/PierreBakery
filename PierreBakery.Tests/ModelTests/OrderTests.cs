@@ -5,13 +5,20 @@ using System;
 
 namespace PierreBarkery.Tests
 {
-  // [TestClass]
-  // public class OrderTests : IDisposable
-  // {
+  [TestClass]
+  public class OrderTests : IDisposable
+  {
 
-  //   // public void Dispose()
-  //   // {
-  //   //   Order.ClearAll();
-  //   // }
-  // }
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
+
+    [TestMethod]
+    public void OrderConstructor_CreatesInstanceOfOrder_Order()
+    {
+      Order newOrder = new Order("order test");
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
+  }
 }
