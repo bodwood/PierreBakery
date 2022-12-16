@@ -21,6 +21,16 @@ namespace PierreBarkery.Models
     {
       _instances.Clear();
     }
+
+    public static List<Vendor> GetAll()
+    {
+      return _instances;
+    }
+
+    public static Vendor Find(int id)
+    {
+      return _instances[id-1];
+    }
   }
 
 }

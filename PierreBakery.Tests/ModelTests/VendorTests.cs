@@ -6,7 +6,7 @@ using System;
 namespace PierreBarkery.Tests
 {
   [TestClass]
-   public class VendorTests : IDisposable
+  public class VendorTests : IDisposable
   {
 
     public void Dispose()
@@ -46,6 +46,30 @@ namespace PierreBarkery.Tests
       Vendor newVendor = new Vendor(vendorName);
       int result = newVendor.Id;
       Assert.AreEqual(1, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsAllVendorObjects_VendorList()
+    {
+      string name1 = "Epicodus";
+      string name2 = "The Tech Academy";
+      Vendor newVendor1 = new Vendor(name1);
+      Vendor newVendor2 = new Vendor(name2);
+      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
+      List<Vendor> result = Vendor.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      string name1 = "Epicodus";
+      string name2 = "The Tech Academy";
+      Vendor newVendor1 = new Vendor(name1);
+      Vendor newVendor2 = new Vendor(name2);
+
+      Vendor result = Vendor.Find(2);
+      Assert.AreEqual(newVendor2, result);
     }
   }
 }
