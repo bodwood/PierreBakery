@@ -28,5 +28,15 @@ namespace PierreBarkery.Tests
       Vendor newVendor = new Vendor(vendorName);
       Assert.AreEqual(vendorName, newVendor.Name);
     }
+
+    [TestMethod]
+    public void SetName_SetsName_String()
+    {
+      string vendorName = "vendor name";
+      Vendor newVendor = new Vendor(vendorName);
+      string updatedName = "updated vendor name";
+      newVendor.Name = updatedName;
+      Assert.AreEqual(updatedName, newVendor.Name);
+    }
   }
 }
