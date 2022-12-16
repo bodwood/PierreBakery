@@ -47,5 +47,17 @@ namespace PierreBarkery.Tests
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetAllOrders_ReturnsListOfOrders_OrderList()
+    {
+      string orderDescription1 = "donuts";
+      string orderDescription2 = "croissants";
+      Order newOrder1 = new Order(orderDescription1);
+      Order newOrder2 = new Order(orderDescription2);
+      List<Order> newList = new List<Order>{newOrder1, newOrder2};
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
