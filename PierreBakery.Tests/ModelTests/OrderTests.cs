@@ -28,5 +28,16 @@ namespace PierreBarkery.Tests
       Order newOrder = new Order(orderDescription);
       Assert.AreEqual(orderDescription, newOrder.Description);
     }
+
+    [TestMethod]
+    public void SetOrderDescription_SetsOrderDescription_String()
+    {
+      string orderDescription = "donuts";
+      Order newOrder = new Order(orderDescription);
+
+      string setDescription = "croissants";
+      newOrder.Description = setDescription;
+      Assert.AreEqual(setDescription, newOrder.Description);
+    }
   }
 }
