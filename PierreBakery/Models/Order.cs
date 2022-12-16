@@ -21,10 +21,10 @@ namespace PierreBarkery.Models
     //   return _instances;
     // }
 
-    // public static void ClearAll()
-    // {
-    //   _instances.Clear();
-    // }
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
 
     // public static Order Find(int id)
     // {
