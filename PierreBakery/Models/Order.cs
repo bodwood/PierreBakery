@@ -7,7 +7,7 @@ namespace PierreBarkery.Models
   {
     public string Description { get; set; }
     public int Id { get; }
-    private static List<Order> _instances = new List<Order> {};
+    private static List<Order> _instances = new List<Order> { };
 
     public Order(string description)
     {
@@ -16,10 +16,10 @@ namespace PierreBarkery.Models
       Id = _instances.Count;
     }
 
-    // public static List<Order> GetAll()
-    // {
-    //   return _instances;
-    // }
+    public static List<Order> GetAll()
+    {
+      return _instances;
+    }
 
     public static void ClearAll()
     {

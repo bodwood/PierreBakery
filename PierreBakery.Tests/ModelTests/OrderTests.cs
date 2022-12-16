@@ -39,5 +39,13 @@ namespace PierreBarkery.Tests
       newOrder.Description = setDescription;
       Assert.AreEqual(setDescription, newOrder.Description);
     }
+
+    [TestMethod]
+    public void GetAllOrders_ResturnsEmptyOrderList_OrderList()
+    {
+      List<Order> newList = new List<Order>{};
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
