@@ -31,6 +31,11 @@ namespace PierreBarkery.Models
     {
       return _instances[id-1];
     }
+
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
+    }
   }
 
 }

@@ -71,5 +71,18 @@ namespace PierreBarkery.Tests
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(newVendor2, result);
     }
+
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithCategory_OrderList()
+    {
+      string description = "distribute donuts";
+      Order newOrder = new Order(description);
+      List<Order> newList = new List<Order> { newOrder };
+      string name = "Epicodus";
+      Vendor newVendor = new Vendor(name);
+      newVendor.AddOrder(newOrder);
+      List<Order> result = newVendor.Orders;
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
