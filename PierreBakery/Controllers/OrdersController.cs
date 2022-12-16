@@ -15,7 +15,7 @@ namespace PierreBarkery.Controllers
     }
 
     [HttpGet("/orders/new")]
-    public ActionResult CreateForm()
+    public ActionResult New()
     {
       return View();
     }
@@ -32,6 +32,13 @@ namespace PierreBarkery.Controllers
     {
       Order.ClearAll();
       return View();
+    }
+
+    [HttpGet("orders/{id}")]  //dynamic routing
+    public ActionResult Show(int id)
+    {
+      Order foundOrder = Order.Find(id);
+      return View(foundOrder);
     }
   }
 }
