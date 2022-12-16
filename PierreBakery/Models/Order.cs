@@ -28,7 +28,7 @@ namespace PierreBarkery.Models
 
     public static Order Find(int id)  //returns the id corresponding to the order within the list
     {
-      return _instances[id-1];
+      return _instances[id - 1];
     }
   }
 }

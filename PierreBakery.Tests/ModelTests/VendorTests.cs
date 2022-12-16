@@ -6,13 +6,13 @@ using System;
 namespace PierreBarkery.Tests
 {
   [TestClass]
-   public class VendorTests //: IDisposable
+   public class VendorTests : IDisposable
   {
 
-    // public void Dispose()
-    // {
-    //   Vendor.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
 
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
@@ -37,6 +37,15 @@ namespace PierreBarkery.Tests
       string updatedName = "updated vendor name";
       newVendor.Name = updatedName;
       Assert.AreEqual(updatedName, newVendor.Name);
+    }
+
+    [TestMethod]
+    public void GetId_ReturnsVendorId_Int()
+    {
+      string vendorName = "vendor name";
+      Vendor newVendor = new Vendor(vendorName);
+      int result = newVendor.Id;
+      Assert.AreEqual(1, result);
     }
   }
 }

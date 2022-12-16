@@ -15,12 +15,12 @@ namespace PierreBarkery.Models
       Name = vendorName;
       _instances.Add(this);
       Id = _instances.Count;
-      Orders = new List<Order>{};
+      Orders = new List<Order> { };
+    }
+    public static void ClearAll()
+    {
+      _instances.Clear();
     }
   }
 
-  // public static void ClearAll()
-  // {
-  //   _instances.Clear();
-  // }
 }
