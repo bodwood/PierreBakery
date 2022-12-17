@@ -6,18 +6,29 @@
   <title>Order</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
 </head>
 
 <body>
-  <h1>Vendor: @Model["vendor"].Name</h1>
-  <h2>Task: @Model["order"].Description</h2>
-  <h2>Amount Needed: @Model["order"].Amount</h2>
-  <h2>Total Price: @Model["order"].Price</h2>
-  <h2>Date: @Model["order"].Date</h2>
+  <div class="container">
+    <h1 id="welcomeTitle">Vendor: @Model["vendor"].Name</h1>
+    <h2 id="orderItems">Task: @Model["order"].Description</h2>
+    <h2 id="orderItems">Amount Needed: @Model["order"].Amount</h2>
+    <h2 id="orderItems">Total Price: @Model["order"].Price</h2>
+    <h2 id="orderItems">Date: @Model["order"].Date</h2>
 
-  <h2><a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a></h2>
-  <h2><a href="/vendors">View Vendors</a></h2>
+    <div class="row" id="title">
+      <div class="col">
+        <button class="btn btn-success btn-lg"><a href='/vendors/@Model["vendor"].Id/orders/new'>Add another
+            order</a></button>
+      </div>
+      <div class="col">
+        <button class="btn btn-info btn-lg"><a href='/vendors'>View Vendors</a></button>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
