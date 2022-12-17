@@ -6,14 +6,25 @@
   <title>Vendors</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="~/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
 </head>
 
 <body>
-  <h1>Welcome</h1>
-  <h3><a href='/vendors'>View vendors</a></h3>
-  <br>
-  <h3><a href='/vendors/new'>Add a new vendor</a></h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>Welcome to Pierre's Bakery! 🍞</h1>
+      </div>
+    </div>
+    <div class="row" id="title">
+      <div class="col-6">
+        <button class="btn btn-success btn-lg"><a href='/vendors'>View vendors</a></button>
+      </div>
+      <div class="col-6">
+        <button class="btn btn-info btn-lg"><a href='/vendors/new'>Add a new vendor</a></button>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

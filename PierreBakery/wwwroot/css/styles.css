@@ -1,0 +1,16 @@
+body{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url("https://wallpapercave.com/wp/wp5760685.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  text-align: center;
+  margin-top: 5%;
+}
+a{
+  color: white;
+}
+
+#title{
+  margin-top: 5%;
+}
