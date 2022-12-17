@@ -6,13 +6,15 @@ namespace PierreBarkery.Models
   public class Vendor
   {
     private static List<Vendor> _instances = new List<Vendor> { };
-    public string Name { get; set; }  //name of vendor
-    public int Id { get; }  //unique id of vendor
-    public List<Order> Orders { get; set; } //list of orders (i.e. Matts BBQ -> Pulled Pork)
+    public string Name { get; set; }  
+    public int Id { get; } 
+      public string Location { get; set; } 
+    public List<Order> Orders { get; set; } 
 
-    public Vendor(string vendorName)
+    public Vendor(string vendorName, string vendorLocation)
     {
       Name = vendorName;
+      Location = vendorLocation;
       _instances.Add(this);
       Id = _instances.Count;
       Orders = new List<Order> { };
